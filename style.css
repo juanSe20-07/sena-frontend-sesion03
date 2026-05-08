@@ -1,0 +1,109 @@
+/* ============================= */
+/* VARIABLES CSS (REQUERIDO)     */
+/* ============================= */
+:root {
+    --color-principal: #3498db;
+    --color-secundario: #2ecc71;
+    --color-fondo: #f5f5f5;
+    --color-texto: #333;
+}
+
+/* ============================= */
+/* BOX-SIZING GLOBAL (REQUERIDO) */
+/* ============================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/* SELECTOR DE ELEMENTO          */
+/* ============================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Otro selector de elemento */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* ============================= */
+/* CONTENEDOR                   */
+/* ============================= */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    /* padding: espacio interno del contenedor */
+    padding: 20px;
+
+    flex-wrap: wrap;
+}
+
+/* ============================= */
+/* TARJETAS (MODELO DE CAJA)    */
+/* ============================= */
+.card {
+    width: 250px;
+
+    /* padding: espacio interno entre contenido y borde */
+    padding: 15px;
+
+    /* border: define el límite visible de la caja */
+    border: 2px solid var(--color-principal);
+
+    /* margin: separación externa entre tarjetas */
+    margin: 10px;
+
+    background-color:white;
+    text-align:center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* SELECTOR DE ELEMENTO (imagen dentro de tarjeta) */
+.card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+/* ============================= */
+/* PRECIO                       */
+/* ============================= */
+.precio {
+    display: block;
+
+    /* margin: separación del precio respecto a otros elementos */
+    margin: 10px 0;
+
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+/* ============================= */
+/* BOTÓN                        */
+/* ============================= */
+button {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+
+    /* padding: espacio interno del botón */
+    padding: 10px;
+
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ============================= */
+/* PSEUDOCLASE (:hover)         */
+/* ============================= */
+.card:hover {
+    transform: scale(1.05);
+    border-color: var(--color-secundario);
+}
